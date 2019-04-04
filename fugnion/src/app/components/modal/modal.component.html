@@ -1,6 +1,6 @@
-<div class="custom-modal">
+<div class="custom-modal" [@modalAnimation]="isOpen">
   <div class="custom-modal-body">
     <ng-content></ng-content>
   </div>
 </div>
-<div class="custom-modal-background"></div>
+<div class="custom-modal-background" [@bgAnimation]="isOpen"></div>

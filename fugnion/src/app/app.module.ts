@@ -7,6 +7,7 @@ import {ParallaxScrollModule} from "ng2-parallaxscroll";
 import {MenuButtonComponent} from "./components/menu-button/menu-button.component";
 import {ModalComponent} from "./components/modal/modal.component";
 import {MenuModalComponent} from "./modules/modals/menu-modal/menu-modal.component";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {MenuModalComponent} from "./modules/modals/menu-modal/menu-modal.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ParallaxScrollModule
+    ParallaxScrollModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
