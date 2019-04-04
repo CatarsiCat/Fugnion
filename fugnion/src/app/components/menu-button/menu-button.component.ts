@@ -1,4 +1,5 @@
 import {Component, OnInit} from "@angular/core";
+import {ModalService} from "../modal/modal-service/modal.service";
 
 @Component({
   selector: 'app-menu-button',
@@ -8,13 +9,14 @@ import {Component, OnInit} from "@angular/core";
 export class MenuButtonComponent implements OnInit {
   isMenuOpen = false;
 
-  constructor() {
+  constructor(private modalService: ModalService) {
   }
 
   ngOnInit() {
   }
 
-  openMenu() {
+  openMenu(id: string) {
+    this.modalService.open(id);
     this.isMenuOpen = !this.isMenuOpen;
     console.log('Is menu open?', this.isMenuOpen);
   }
