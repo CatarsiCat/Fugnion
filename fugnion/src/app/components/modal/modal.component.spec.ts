@@ -1,6 +1,7 @@
 import {async, ComponentFixture, TestBed} from "@angular/core/testing";
 
 import {ModalComponent} from "./modal.component";
+import {describe, expect} from "jasmine";
 
 describe('ModalComponent', () => {
   let component: ModalComponent;
