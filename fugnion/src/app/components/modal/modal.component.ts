@@ -54,7 +54,6 @@ export class ModalComponent implements OnInit, OnDestroy {
     this.element.style.visibility = 'hidden';
 
     this.element.addEventListener('click', e => {
-      console.log(e);
       if (e.target.classList.contains('custom-modal')) {
         modal.close();
       }

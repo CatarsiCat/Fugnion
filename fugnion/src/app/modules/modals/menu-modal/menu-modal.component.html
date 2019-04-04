@@ -1,3 +1,36 @@
-<custom-modal id="menu">
-  <h1>TODO Menu</h1>
+<custom-modal #menuModal id="menu">
+  <ngb-accordion #accordion [closeOthers]="true">
+    <ngb-panel id="static-1">
+      <ng-template ngbPanelTitle>
+        <span>&#9733; <b>Fancy</b> title 1 &#9733;</span>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        Anim pariatur cliche
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel id="static-2">
+      <ng-template ngbPanelTitle>
+        <span>&#9733; <b>Fancy</b> title 2 &#9733;</span>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        Anim pariatur cliche
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel id="static-3">
+      <ng-template ngbPanelTitle>
+        <span>&#9733; <b>Fancy</b> title 3 &#9733;</span>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        Anim pariatur cliche
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel id="static-4">
+      <ng-template ngbPanelTitle>
+        <span>&#9733; <b>Fancy</b> title 4 &#9733;</span>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        Anim pariatur cliche
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
 </custom-modal>

@@ -18,6 +18,5 @@ export class MenuButtonComponent implements OnInit {
   openMenu(id: string) {
     this.modalService.open(id);
     this.isMenuOpen = !this.isMenuOpen;
-    console.log('Is menu open?', this.isMenuOpen);
   }
 }
