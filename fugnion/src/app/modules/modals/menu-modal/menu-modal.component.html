@@ -1,26 +1,24 @@
 <custom-modal #menuModal id="menu">
-  <p-accordion [activeIndex]="index">
-    <p-accordionTab header="Salads">
-      <div class="menu-element">Salads...</div>
-    </p-accordionTab>
-    <p-accordionTab header="Pasta">
-      <div class="menu-element"> Pasta...</div>
-      <div class="menu-element"> Pasta...</div>
-      <div class="menu-element"> Pasta...</div>
-    </p-accordionTab>
-    <p-accordionTab header="Pizza" class="tab-with-submenu">
-      <p-accordion [activeIndex]="subIndex">
-        <p-accordionTab header="Bacon">
-          <div class="menu-element"> Bacon...</div>
-        </p-accordionTab>
-        <p-accordionTab header="Ham">
-          <div class="menu-element"> Ham...</div>
-          <div class="menu-element"> Hamon!</div>
-        </p-accordionTab>
-        <p-accordionTab header="Pineapple?">
-          <div class="menu-element">Pineapple?...</div>
-        </p-accordionTab>
-      </p-accordion>
-    </p-accordionTab>
-  </p-accordion>
+  <p-panelMenu [model]="items"></p-panelMenu>
+
+  <!--Old menu-->
+  <!--<p-accordion [activeIndex]="index">-->
+    <!--<p-accordionTab header="Home">-->
+    <!--</p-accordionTab>-->
+    <!--<p-accordionTab header="Place">-->
+      <!--<div class="menu-element">Hotel</div>-->
+      <!--<div class="menu-element">How to arrive</div>-->
+      <!--<div class="menu-element">Touristic info</div>-->
+    <!--</p-accordionTab>-->
+    <!--<p-accordionTab header="THE PLAN" class="tab-with-submenu">-->
+      <!--<p-accordion [activeIndex]="subIndex">-->
+          <!--<div class="menu-element"> Bacon...</div>-->
+        <!--<div class="menu-element">Pineapple?...</div>-->
+        <!--<p-accordionTab header="Art">-->
+          <!--<div class="menu-element"> Ham...</div>-->
+          <!--<div class="menu-element"> Hamon!</div>-->
+        <!--</p-accordionTab>-->
+      <!--</p-accordion>-->
+    <!--</p-accordionTab>-->
+  <!--</p-accordion>-->
 </custom-modal>
