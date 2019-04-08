@@ -5,7 +5,7 @@
   width: 100%;
 
   .main-block {
-    background: #a1312b;
+    background: var(--primary);
     padding: 20px 0;
     >div {
       max-width: 900px;

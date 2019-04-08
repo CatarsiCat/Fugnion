@@ -10,6 +10,7 @@ import {MenuModalComponent} from "./modules/modals/menu-modal/menu-modal.compone
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {AccordionModule} from "primeng/primeng";
+import {ThemeModule, defaultTheme, otherTheme} from "./theme";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,11 @@ import {AccordionModule} from "primeng/primeng";
     NgbModule,
     BrowserModule,
     BrowserAnimationsModule,
-    AccordionModule
+    AccordionModule,
+    ThemeModule.forRoot({
+      themes: [defaultTheme, otherTheme],
+      active: 'default'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

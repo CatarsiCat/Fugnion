@@ -13,7 +13,7 @@
   ::ng-deep .ui-accordion {
     .ui-accordion-header:not(.ui-state-disabled).ui-state-active {
       a {
-        background-color: red !important;
+        background-color: var(--primary) !important;
         border: 1px solid green !important;
       }
       &:hover a {
