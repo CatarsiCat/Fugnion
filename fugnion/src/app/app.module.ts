@@ -9,6 +9,7 @@ import {ModalComponent} from "./components/modal/modal.component";
 import {MenuModalComponent} from "./modules/modals/menu-modal/menu-modal.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {AccordionModule} from "primeng/primeng";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,10 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
     AppRoutingModule,
     ParallaxScrollModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    AccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

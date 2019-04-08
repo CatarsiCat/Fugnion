@@ -1,0 +1,62 @@
+#menu {
+  text-align: center;
+
+  ::ng-deep .ui-accordion-content, .ui-widget-content {
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    padding: 0 !important;
+    border-bottom: none !important;
+  }
+
+  //TODO Change colors with theme based ones
+  ::ng-deep .ui-accordion {
+    .ui-accordion-header:not(.ui-state-disabled).ui-state-active {
+      a {
+        background-color: red !important;
+        border: 1px solid green !important;
+      }
+      &:hover a {
+        background-color: orange !important;
+      }
+    }
+    .ui-accordion-header a {
+      background-color: #dcdcdc !important;
+    }
+  }
+
+  .tab-with-submenu {
+    ::ng-deep .ui-accordion {
+      .ui-accordion-header:not(.ui-state-disabled).ui-state-active {
+        a {
+          background-color: yellow !important;
+          border: 1px solid purple !important;
+        }
+        &:hover a {
+          background-color: blue !important;
+        }
+      }
+      .ui-accordion-header a {
+        background-color: #f5f5f5 !important;
+      }
+    }
+    .ui-accordion-content-wrapper:first-of-type {
+      .ui-accordion-content .ui-widget-content {
+        border-bottom: none !important;
+      }
+    }
+  }
+
+  .menu-element {
+    padding: 8px 14px !important;
+    border-top: 1px solid #c8c8c8;
+    border-right: 1px solid #c8c8c8;
+    border-left: 1px solid #c8c8c8;
+    border-bottom: none;
+    &:last-of-type {
+      border: 1px solid #c8c8c8;
+    }
+  }
+}
+
+
