@@ -18,12 +18,8 @@ import {HomeComponent} from "./components/home/home.component";
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent, //TODO leave appcomponent clean and move to HomeComponent in a way children routes can inherit background and stuff
+    component: HomeComponent, //TODO leave appcomponent clean and move to HomeComponent in a way children routes can inherit background and stuff. EDIT: it is working for register only now. Replicate all this
     children: [
-      {
-        path: 'register',
-        component: RegisterComponent
-      },
       {
         path: 'place',
         children: [
@@ -96,6 +92,10 @@ const routes: Routes = [
       }
     ]
   },
+  {
+    path: 'register',
+    component: RegisterComponent
+  }
 ];
 
 @NgModule({

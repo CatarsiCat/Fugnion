@@ -7,7 +7,6 @@ import {IParallaxScrollConfig} from "ng2-parallaxscroll";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'fugnion';
   parallaxConfig: IParallaxScrollConfig = {
     axis: 'Y',
     speed: +.5

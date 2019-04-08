@@ -24,6 +24,7 @@ export class MenuModalComponent implements OnInit, DoCheck {
       {
         label: 'Home',
         icon: 'pi pi-pw pi-home',
+        url: '/'
       },
       {
         label: 'Place',
@@ -36,6 +37,7 @@ export class MenuModalComponent implements OnInit, DoCheck {
       {
         label: 'Register',
         icon: 'pi pi-fw pi-user-plus',
+        url: '/register'
       },
       {
         label: 'THE PLAN',
