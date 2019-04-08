@@ -11,9 +11,9 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {AccordionModule, PanelMenuModule} from "primeng/primeng";
 import { RegisterComponent } from './components/register/register.component';
-import { HotelComponent } from './components/palce/hotel/hotel.component';
-import { HowtoarriveComponent } from './components/palce/howtoarrive/howtoarrive.component';
-import { TouristinfoComponent } from './components/palce/touristinfo/touristinfo.component';
+import { HotelComponent } from './components/place/hotel/hotel.component';
+import { HowtoarriveComponent } from './components/place/howtoarrive/howtoarrive.component';
+import { TouristinfoComponent } from './components/place/touristinfo/touristinfo.component';
 import { RulebookComponent } from './components/plan/rulebook/rulebook.component';
 import { SubmitactivityComponent } from './components/plan/submitactivity/submitactivity.component';
 import { HonorguestsComponent } from './components/plan/honorguests/honorguests.component';
@@ -23,6 +23,7 @@ import { MorestuffComponent } from './components/plan/art/morestuff/morestuff.co
 import { AbookComponent } from './components/plan/art/abook/abook.component';
 import { GalleryComponent } from './components/other/gallery/gallery.component';
 import { AboutComponent } from './components/other/about/about.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { AboutComponent } from './components/other/about/about.component';
     MorestuffComponent,
     AbookComponent,
     GalleryComponent,
-    AboutComponent
+    AboutComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
