@@ -1,3 +1,20 @@
-<p>
-  gallery works!
-</p>
+<div class="main-block main-empty-block"></div>
+
+<div class="main-block">
+  <div>
+    <div class="text-block" style="padding-bottom: 20px">Mew cat cat moo moo lick ears lick paws and jump five feet high
+      and sideways when a shadow moves, or poop on
+      floor and watch human clean
+    </div>
+
+  </div>
+  <p-carousel [value]="galleryPhotos" [numVisible]="1" [responsive]="true"
+              [pageLinks]="4" circular="true" autoplayInterval="5000" easing="ease-out">
+    <ng-template let-photo pTemplate="item">
+      <img class="carousel-photo" src="assets/carousel/{{photo.url}}.jpg">
+    </ng-template>
+
+  </p-carousel>
+</div>
+
+

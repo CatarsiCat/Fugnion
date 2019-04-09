@@ -1,7 +1,19 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-menu-button></app-menu-button>
 <div parallax [config]="parallaxConfig" class="main-parallax"> <!-- TODO adjust parallax to be the same in all pages -->
-  <router-outlet></router-outlet>
+
+  <div class="outlet-wrapper">
+    <router-outlet></router-outlet>
+
+    <div class="main-block main-empty-block"></div>
+
+    <div class="main-block main-footer">
+      <p>© Sachi software</p>
+      <img src="../assets/banner.jpg">
+    </div>
+
+  </div>
+
 </div>
 
 
