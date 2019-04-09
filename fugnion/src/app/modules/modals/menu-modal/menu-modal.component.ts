@@ -29,9 +29,18 @@ export class MenuModalComponent implements OnInit, DoCheck {
       {
         label: 'Place',
         items: [
-          {label: 'Hotel'},
-          {label: 'How to arrive'},
-          {label: 'Tourist info'}
+          {
+            label: 'Hotel',
+            url: 'place/hotel'
+          },
+          {
+            label: 'How to arrive',
+            url: 'place/howtoarrive'
+          },
+          {
+            label: 'Tourist info',
+            url: 'place/touristicinfo'
+          }
         ]
       },
       {
@@ -44,30 +53,38 @@ export class MenuModalComponent implements OnInit, DoCheck {
         items: [
           {
             label: 'Rulebook',
+            url: 'plan/rulebook'
           },
           {
             label: 'Suggest activity',
+            url: 'plan/submitactivity'
           },
           {
             label: 'Guests of honor',
+            url: 'plan/honorguests'
           },
           {
             label: 'ONG',
+            url: 'plan/ong'
           },
           {
             label: 'Art',
             items: [
               {
                 label: 'Stuff',
+                url: 'plan/art/stuff'
               },
               {
                 label: 'More stuff',
+                url: 'plan/art/morestuff'
               },
               {
                 label: 'A book',
                 icon: 'pi pi-fw pi-file',
+                url: 'plan/art/abook'
               }
-            ]}
+            ]
+          }
         ]
       },
       {
@@ -75,9 +92,11 @@ export class MenuModalComponent implements OnInit, DoCheck {
         items: [
           {
             label: 'Gallery',
+            url: 'other/gallery'
           },
           {
             label: 'About',
+            url: 'other/about'
           }
         ]
       }

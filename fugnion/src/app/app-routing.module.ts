@@ -16,87 +16,87 @@ import {GalleryComponent} from "./components/other/gallery/gallery.component";
 import {HomeComponent} from "./components/home/home.component";
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent, //TODO leave appcomponent clean and move to HomeComponent in a way children routes can inherit background and stuff. EDIT: it is working for register only now. Replicate all this
-    children: [
-      {
-        path: 'place',
-        children: [
-          {
-            path: 'hotel',
-            component: HotelComponent
-          },
-          {
-            path: 'howtoarrive',
-            component: HowtoarriveComponent
-          },
-          {
-            path: 'touristicinfo',
-            component: TouristinfoComponent
-          }
-        ]
-      },
-      {
-        path: 'plan',
-        children: [
-          {
-            path: 'art',
-            children: [
-              {
-                path: 'abook',
-                component: AbookComponent
-              }
-              ,
-              {
-                path: 'morestuff',
-                component: MorestuffComponent
-              }
-              ,
-              {
-                path: 'stuff',
-                component: StuffComponent
-              }
-            ]
-          },
-          {
-            path: 'honorguests',
-            component: HonorguestsComponent
-          },
-          {
-            path: 'ong',
-            component: OngComponent
-          },
-          {
-            path: 'rulebook',
-            component: RulebookComponent
-          },
-          {
-            path: 'submitactivity',
-            component: SubmitactivityComponent
-          }
-        ]
-      },
-      {
-        path: 'other',
-        children: [
-          {
-            path: 'about',
-            component: AboutComponent
-          },
-          {
-            path: 'touristicinfo',
-            component: GalleryComponent
-          }
-        ]
-      }
-    ]
-  },
-  {
-    path: 'register',
-    component: RegisterComponent
-  }
-];
+    {
+      path: '',
+      component: HomeComponent
+    },
+    {
+      path: 'place',
+      children: [
+        {
+          path: 'hotel',
+          component: HotelComponent
+        },
+        {
+          path: 'howtoarrive',
+          component: HowtoarriveComponent
+        },
+        {
+          path: 'touristicinfo',
+          component: TouristinfoComponent
+        }
+      ]
+    },
+    {
+      path: 'plan',
+      children: [
+        {
+          path: 'art',
+          children: [
+            {
+              path: 'abook',
+              component: AbookComponent
+            }
+            ,
+            {
+              path: 'morestuff',
+              component: MorestuffComponent
+            }
+            ,
+            {
+              path: 'stuff',
+              component: StuffComponent
+            }
+          ]
+        },
+        {
+          path: 'honorguests',
+          component: HonorguestsComponent
+        },
+        {
+          path: 'ong',
+          component: OngComponent
+        },
+        {
+          path: 'rulebook',
+          component: RulebookComponent
+        },
+        {
+          path: 'submitactivity',
+          component: SubmitactivityComponent
+        }
+      ]
+    },
+    {
+      path: 'other',
+      children: [
+        {
+          path: 'about',
+          component: AboutComponent
+        },
+        {
+          path: 'gallery',
+          component: GalleryComponent
+        }
+      ]
+    },
+    {
+      path: 'register',
+      component:
+      RegisterComponent
+    }
+  ]
+;
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
