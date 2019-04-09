@@ -1,6 +1,7 @@
 import {Component, DoCheck, KeyValueDiffers, OnInit, ViewChild} from "@angular/core";
 import {ModalComponent} from "../../../components/modal/modal.component";
 import {MenuItem} from "primeng/api";
+import {ModalService} from "../../../components/modal/modal-service/modal.service";
 
 @Component({
   selector: 'app-menu-modal',
@@ -15,8 +16,8 @@ export class MenuModalComponent implements OnInit, DoCheck {
   items: MenuItem[];
   differ: any;
 
-  constructor(private differs: KeyValueDiffers) {
-    this.differ = this.differs.find({}).create();
+  constructor(private differs: KeyValueDiffers, private modalService: ModalService) {
+    this.differ = this.differs.find({}).create(); // Delete if not needed at the end
   }
 
   ngOnInit() {
@@ -24,64 +25,76 @@ export class MenuModalComponent implements OnInit, DoCheck {
       {
         label: 'Home',
         icon: 'pi pi-pw pi-home',
-        url: '/'
+        routerLink: ['/'],
+        command: () => this.closeMenuModal()
       },
       {
         label: 'Place',
         items: [
           {
             label: 'Hotel',
-            url: 'place/hotel'
+            routerLink: ['place/hotel'],
+            command: () => this.closeMenuModal()
           },
           {
             label: 'How to arrive',
-            url: 'place/howtoarrive'
+            routerLink: ['place/howtoarrive'],
+            command: () => this.closeMenuModal()
           },
           {
             label: 'Tourist info',
-            url: 'place/touristicinfo'
+            routerLink: ['place/touristicinfo'],
+            command: () => this.closeMenuModal()
           }
         ]
       },
       {
         label: 'Register',
         icon: 'pi pi-fw pi-user-plus',
-        url: '/register'
+        routerLink: ['/register'],
+        command: () => this.closeMenuModal()
       },
       {
         label: 'THE PLAN',
         items: [
           {
             label: 'Rulebook',
-            url: 'plan/rulebook'
+            routerLink: ['plan/rulebook'],
+            command: () => this.closeMenuModal()
           },
           {
             label: 'Suggest activity',
-            url: 'plan/submitactivity'
+            routerLink: ['plan/submitactivity'],
+            command: () => this.closeMenuModal()
           },
           {
             label: 'Guests of honor',
-            url: 'plan/honorguests'
+            routerLink: ['plan/honorguests'],
+            command: () => this.closeMenuModal()
           },
           {
             label: 'ONG',
-            url: 'plan/ong'
+            routerLink: ['plan/ong'],
+            command: () => this.closeMenuModal()
           },
           {
             label: 'Art',
             items: [
               {
                 label: 'Stuff',
-                url: 'plan/art/stuff'
+                routerLink: ['plan/art/stuff'],
+                command: () => this.closeMenuModal()
               },
               {
                 label: 'More stuff',
-                url: 'plan/art/morestuff'
+                routerLink: ['plan/art/morestuff'],
+                command: () => this.closeMenuModal()
               },
               {
                 label: 'A book',
                 icon: 'pi pi-fw pi-file',
-                url: 'plan/art/abook'
+                routerLink: ['plan/art/abook'],
+                command: () => this.closeMenuModal()
               }
             ]
           }
@@ -92,11 +105,13 @@ export class MenuModalComponent implements OnInit, DoCheck {
         items: [
           {
             label: 'Gallery',
-            url: 'other/gallery'
+            routerLink: ['other/gallery'],
+            command: () => this.closeMenuModal()
           },
           {
             label: 'About',
-            url: 'other/about'
+            routerLink: ['other/about'],
+            command: () => this.closeMenuModal()
           }
         ]
       }
@@ -114,4 +129,19 @@ export class MenuModalComponent implements OnInit, DoCheck {
     }
   }
 
+  closeMenuModal() {
+    this.modalService.close('menu');
+    this.closeAllSubmenus();
+  }
+
+  closeAllSubmenus() {
+    for (const i of this.items) {
+      i.expanded = false;
+      if (i.items) {
+        for (const j of this.items) {
+          j.expanded = false;
+        }
+      }
+    }
+  }
 }
